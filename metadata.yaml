@@ -1,0 +1,32 @@
+_repo: The-Red-Badge-of-Courage_73
+creator:
+  author:
+    agent_name: Crane, Stephen
+    alias: Smith, Johnston
+    birthdate: 1871
+    deathdate: 1900
+    gutenberg_agent_id: '55'
+    url: http://www.gutenberg.org/2009/agents/55
+    wikipedia: http://en.wikipedia.org/wiki/Stephen_Crane
+gutenberg_bookshelf:
+- US Civil War
+- Bestsellers, American, 1895-1923
+- Best Books Ever Listings
+- Historical Fiction
+gutenberg_issued: '1993-07-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '73'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- '!lcsh:War stories'
+- '!lcc:PS'
+- '!lcsh:Chancellorsville, Battle of, Chancellorsville, Va., 1863 -- Fiction'
+- '!lcsh:Historical fiction'
+- '!lcsh:United States -- History -- Civil War, 1861-1865 -- Fiction'
+- '!lcsh:Virginia -- History -- Civil War, 1861-1865 -- Fiction'
+title: 'The Red Badge of Courage: An Episode of the American Civil War'
+url: http://www.gutenberg.org/ebooks/73

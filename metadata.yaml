@@ -15,9 +15,9 @@ creator:
     url: http://www.gutenberg.org/2009/agents/55
     wikipedia: http://en.wikipedia.org/wiki/Stephen_Crane
 gutenberg_bookshelf:
-- Bestsellers, American, 1895-1923
 - US Civil War
 - Best Books Ever Listings
+- Bestsellers, American, 1895-1923
 - Historical Fiction
 gutenberg_issued: '1993-07-01'
 gutenberg_type: Text
@@ -28,11 +28,11 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:United States -- History -- Civil War, 1861-1865 -- Fiction'
-- '!lcsh:Historical fiction'
-- '!lcsh:Virginia -- History -- Civil War, 1861-1865 -- Fiction'
-- '!lcsh:Chancellorsville, Battle of, Chancellorsville, Va., 1863 -- Fiction'
-- '!lcc:PS'
-- '!lcsh:War stories'
+- '!lcsh: Virginia -- History -- Civil War, 1861-1865 -- Fiction'
+- '!lcsh: United States -- History -- Civil War, 1861-1865 -- Fiction'
+- '!lcsh: Chancellorsville, Battle of, Chancellorsville, Va., 1863 -- Fiction'
+- '!lcc: PS'
+- '!lcsh: Historical fiction'
+- '!lcsh: War stories'
 title: 'The Red Badge of Courage: An Episode of the American Civil War'
 url: http://www.gutenberg.org/ebooks/73

@@ -1,5 +1,5 @@
 _repo: The-Red-Badge-of-Courage_73
-_version: 0.0.2
+_version: 0.1.0
 covers:
 - attribution: Ed Gaither - Modern Electrographic, 2015
   cover_type: original
@@ -36,5 +36,6 @@ subjects:
 - '!lcc: PS'
 - '!lcsh: Historical fiction'
 - '!lcsh: War stories'
+- GITenberg
 title: 'The Red Badge of Courage: An Episode of the American Civil War'
 url: http://www.gutenberg.org/ebooks/73

@@ -21,13 +21,15 @@ script:
 - /usr/bin/python asciidoctor-htmlbook/gitberg-machine/machine.py -o . -m metadata.yaml book.html
 - xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
 - cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
-- cp cover.jpg OEBPS/cover.jpg
+- if [ -e cover.jpg ]; then cp cover.jpg OEBPS/cover.jpg; fi
 # look for first images directory and one found, copy over to ./OEBPS
 - find . -name images -type d | head -n 1 | xargs -I {} mv {} ./OEBPS/
 - zip -rX book.epub mimetype
 - zip -rX book.epub OEBPS/ META-INF/
 - if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi
 - mv book.epub The-Red-Badge-of-Courage-An-Episode-of-the-American-Civil-War.epub
+- ebook-convert The-Red-Badge-of-Courage-An-Episode-of-the-American-Civil-War.epub The-Red-Badge-of-Courage-An-Episode-of-the-American-Civil-War.mobi
+- xvfb-run ebook-convert The-Red-Badge-of-Courage-An-Episode-of-the-American-Civil-War.epub The-Red-Badge-of-Courage-An-Episode-of-the-American-Civil-War.pdf
 branches:
   only:
   - master
@@ -43,10 +45,15 @@ deploy:
   provider: releases
   api_key:
     secure: oGRABxDWvB0sQR2WQ5/9TrX54yD6CV36N3yn5qKffgWDuHOkUjdzbPv/TcyeT8biHxsUCupCI88xVyrUouMXq8bFDH+E96CND/MD69O8uDHBz0yG1OZrEiXxTivcdEVH9fKiRBDQcHrq4T+OBmp3Fah18AzqFcA/od+S9+xL3fAubNrQbTfY4Hg4OiVYJFncHq7tBpHLPrOu23nTB3qDZwK89Eb7WThrAMKvah6UJ3FR6K+LKwQ2GWrJOD+weSFeyAkXyXb58CLpHbJb0pMsBxulAxcS2VwOD15ifHXOZeXqlEVeFjTPttrtzkWb4fSrg2kAbDmuyJoDReoCnwV+8+YXwjA+yGT7ELR8L9KBXmxovtgxrn11YQxo/833ut1mBpoZ1xWwfzFq6ekgop3tK3IjOoYOkB26Ej0oj8HuLpAmCuKe0m/LZ4WlF2mh0CkkrIb9gaPZRp5rULDMbGTylMwWUgHmY2D/C37avdaQYVoUwJsm4tB6if6qh8pXvk2GlBMqoBUruusZ7kQce7sIpkTt1QVFUC9lngQUBp8R4lXqoLxTjocA8HVJlcV17P5omc+OiuuOTnaE2xyYwzVBkInH8kDJFRw2A4lLef6adfQ5cg7w5QIUPHHgGoYg/9GjSE1sw2LV1/IgsB4v3AfD6ZHCSapC7bB5qQ/RtBuNHGg=
-  file: The-Red-Badge-of-Courage-An-Episode-of-the-American-Civil-War.epub
+  file:
+    - The-Red-Badge-of-Courage-An-Episode-of-the-American-Civil-War.epub
+    - The-Red-Badge-of-Courage-An-Episode-of-the-American-Civil-War.mobi
+    - The-Red-Badge-of-Courage-An-Episode-of-the-American-Civil-War.pdf
   "on":
     repo: GITenberg/The-Red-Badge-of-Courage_73
 addons:
   apt:
     packages:
     - xsltproc
+    - xvfb
+    - calibre
